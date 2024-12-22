@@ -36,11 +36,7 @@ class _ListaItemState extends State<ListaItem> {
             onPressed: () {
               Future.delayed(
                 Duration(milliseconds: 200),
-                () {
-                    
-                      widget.onChangeCheck();
-                    
-                },
+                () {widget.onChangeCheck();},
               );
               
             }, 

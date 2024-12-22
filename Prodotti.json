@@ -1,0 +1,344 @@
+[
+    {
+        "Item": "Pepsi Max 1L"
+    },
+    {
+        "Item": "Coca Cola Zero 1L"
+    },
+    {
+        "Item": "Ichnusa non filtrata"
+    },
+    {
+        "Item": "Moretti 33cl"
+    },
+    {
+        "Item": "Moretti 66cl"
+    },
+    {
+        "Item": "Succo AranciaRossa"
+    },
+    {
+        "Item": "Succo FruttidiBosco"
+    },
+    {
+        "Item": "Caffe"
+    },
+    {
+        "Item": "Té"
+    },
+    {
+        "Item": "Gocciole"
+    },
+    {
+        "Item": "Braciolette"
+    },
+    {
+        "Item": "hamburger"
+    },
+    {
+        "Item": "cotoletta"
+    },
+    {
+        "Item": "salsiccia"
+    },
+    {
+        "Item": "sale"
+    },
+    {
+        "Item": "zucchero"
+    },
+    {
+        "Item": "pepe"
+    },
+    {
+        "Item": "noce moscata"
+    },
+    {
+        "Item": "olio"
+    },
+    {
+        "Item": "Curcuma Latte"
+    },
+    {
+        "Item": "ketchup"
+    },
+    {
+        "Item": "maionese"
+    },
+    {
+        "Item": "peperoncino macinato"
+    },
+    {
+        "Item": "aglio"
+    },
+    {
+        "Item": "cipolla classica"
+    },
+    {
+        "Item": "cipolla di tropea"
+    },
+    {
+        "Item": "sugo"
+    },
+    {
+        "Item": "sugo pronto"
+    },
+    {
+        "Item": "Nodini mozzarella"
+    },
+    {
+        "Item": "Mozzarella bufala"
+    },
+    {
+        "Item": "Mozzarella"
+    },
+    {
+        "Item": "Grana Padano"
+    },
+    {
+        "Item": "Grana Padano Grattugiato"
+    },
+    {
+        "Item": "Caciocavallo"
+    },
+    {
+        "Item": "Pecorino"
+    },
+    {
+        "Item": "Galbanino"
+    },
+    {
+        "Item": "Topolino"
+    },
+    {
+        "Item": "Nocciole sgusciate"
+    },
+    {
+        "Item": "Pistacchi tostati"
+    },
+    {
+        "Item": "Noci sgusciate"
+    },
+    {
+        "Item": "pesche"
+    },
+    {
+        "Item": "fragole"
+    },
+    {
+        "Item": "ciliegie"
+    },
+    {
+        "Item": "noci"
+    },
+    {
+        "Item": "ananas"
+    },
+    {
+        "Item": "susine"
+    },
+    {
+        "Item": "nocciols"
+    },
+    {
+        "Item": "pompelmo"
+    },
+    {
+        "Item": "arancia"
+    },
+    {
+        "Item": "mela"
+    },
+    {
+        "Item": "Tonno in scatola"
+    },
+    {
+        "Item": "Mais in scatola"
+    },
+    {
+        "Item": "Latte"
+    },
+    {
+        "Item": "Yogurt"
+    },
+    {
+        "Item": "Latte di mandorla"
+    },
+    {
+        "Item": "Latte di noci"
+    },
+    {
+        "Item": "Latte di riso"
+    },
+    {
+        "Item": "Latte di capra"
+    },
+    {
+        "Item": "Ricotta"
+    },
+    {
+        "Item": "pane pizza"
+    },
+    {
+        "Item": "pane antico"
+    },
+    {
+        "Item": "ciabatta"
+    },
+    {
+        "Item": "tartaruga"
+    },
+    {
+        "Item": "pane al burro"
+    },
+    {
+        "Item": "pinsa"
+    },
+    {
+        "Item": "Penne Rigate "
+    },
+    {
+        "Item": "Farfalle"
+    },
+    {
+        "Item": "Rigatoni "
+    },
+    {
+        "Item": "Fusilli"
+    },
+    {
+        "Item": "Cannoli"
+    },
+    {
+        "Item": "Cannolocchi"
+    },
+    {
+        "Item": "Viennese"
+    },
+    {
+        "Item": "Gelatini"
+    },
+    {
+        "Item": "Tartine"
+    },
+    {
+        "Item": "Cinesini"
+    },
+    {
+        "Item": "San Carlo 400g"
+    },
+    {
+        "Item": "tortillia 400g"
+    },
+    {
+        "Item": "San Carlo Rustiche"
+    },
+    {
+        "Item": "San Carlo Cartoccio"
+    },
+    {
+        "Item": "Amica Chips Formaggio"
+    },
+    {
+        "Item": "Lays"
+    },
+    {
+        "Item": "Kinder Fettallatte"
+    },
+    {
+        "Item": "Kinder Paradiso"
+    },
+    {
+        "Item": "Kinder Ovetto"
+    },
+    {
+        "Item": "Ferrero rocher"
+    },
+    {
+        "Item": "Tabasco"
+    },
+    {
+        "Item": "curcuma"
+    },
+    {
+        "Item": "pepe negro"
+    },
+    {
+        "Item": "peperoncino essiccato"
+    },
+    {
+        "Item": "origano"
+    },
+    {
+        "Item": "prezzemolo"
+    },
+    {
+        "Item": "basilico"
+    },
+    {
+        "Item": "ariosto"
+    },
+    {
+        "Item": "noce moscata"
+    },
+    {
+        "Item": "paprika"
+    },
+    {
+        "Item": "Sofficini"
+    },
+    {
+        "Item": "pesce gratinato"
+    },
+    {
+        "Item": "gelati"
+    },
+    {
+        "Item": "Melanzane Surgelate"
+    },
+    {
+        "Item": "Zucchine Surgelate"
+    },
+    {
+        "Item": "Fagiolini Surgelati"
+    },
+    {
+        "Item": "Speck"
+    },
+    {
+        "Item": "Prosciutto Crudo"
+    },
+    {
+        "Item": "Prosciutto Cotto"
+    },
+    {
+        "Item": "Salame dolce"
+    },
+    {
+        "Item": "Salame Piccante"
+    },
+    {
+        "Item": "Nduja"
+    },
+    {
+        "Item": "Lattuga confezionata "
+    },
+    {
+        "Item": "Pomodori oblunghi"
+    },
+    {
+        "Item": "Pomodori pachino"
+    },
+    {
+        "Item": "Melanzane"
+    },
+    {
+        "Item": "Zucchine"
+    },
+    {
+        "Item": "Limone"
+    },
+    {
+        "Item": "cotonfioc"
+    }
+]

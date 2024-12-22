@@ -1,23 +1,35 @@
 import 'package:flutter/material.dart';
 import 'package:prova/firebase_options.dart';
+import 'package:prova/src/Model/FirebaseDB.dart';
 import 'package:prova/src/widgets/ListaItem.dart';
 import 'package:prova/src/widgets/ListaSpesa.dart';
-import 'package:prova/src/widgets/ListaSpesaClass.dart';
+import 'package:prova/src/Model/ListaSpesaClass.dart';
 import 'package:prova/src/widgets/SearchListPanel.dart';
 import 'package:prova/src/widgets/Searchbar.dart';
 import 'package:prova/src/widgets/SearchbarNew.dart';
 import 'package:prova/src/widgets/Searchlist.dart';
 
-import 'package:prova/src/widgets/slideUpPanel.dart';
+import 'package:prova/src/newWidgets/slideUpPanel.dart';
 import 'package:sliding_up_panel/sliding_up_panel.dart';
 import 'package:firebase_core/firebase_core.dart';
 
+import 'package:provider/provider.dart';
+
+
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  runApp(MyApp());
+  runApp(MultiProvider(
+      providers: [
+        ChangeNotifierProvider<FirebaseDB>(create: (_) => FirebaseDB()),
+      ],
+      child: MyApp(),
+    ),);
+    
 }
 
 class MyApp extends StatelessWidget {
+
+  
   MyApp({Key? key}) : super(key: key);
   final fbApp = Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform
@@ -27,6 +39,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
@@ -77,18 +90,28 @@ class MyHomePage extends StatefulWidget {
 
   @override
   State<MyHomePage> createState() => _MyHomePageState();
+
+  
 }
 
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
   //final array = List<ListaSpesaClass>.generate(10, (index) => new ListaSpesaClass(index.toString(),false,index.toString()));
   //final array = List<String>.generate(10, (index) => index.toString());
-  void _incrementCounter() {
-    
+
+  @override
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      context.read<FirebaseDB>().getUncheckedItems().then((value) => debugPrint(value.length.toString() +  "\t1"));
+      context.read<FirebaseDB>().getCheckedItems().then((value) => debugPrint(value.length.toString() + "\t2"));
+    });
   }
 
   @override
   Widget build(BuildContext context) {
+    List<ListaSpesaClass> lista;
+    debugPrint("Length:" + context.read<FirebaseDB>().uncheckedItems.length.toString());
     final PanelController _panelController = PanelController();
     final double radius = 10;
     // This method is rerun every time setState is called, for instance as done
@@ -105,46 +128,6 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Colors.cyanAccent,
       ),
 
-      /**SlidingUpPanel(
-          padding: EdgeInsets.symmetric(vertical: 15),
-          maxHeight: MediaQuery.of(context).size.height,
-          header : Container(
-            width: MediaQuery.of(context).size.width,
-            height: 20,
-            alignment: Alignment.center,
-            child: Stack(
-              clipBehavior: Clip.none,
-              alignment: Alignment.topCenter,
-              children: [
-                Positioned(
-                  top: -5,
-                  child: Transform.translate(
-                      offset: Offset(0,-3),
-                      child: TextButton(
-                    onPressed: () {}, 
-                    style: TextButton.styleFrom(
-                      primary: Colors.green
-                    ),
-                    child: Icon(
-                      Icons.shopping_cart_checkout_rounded,
-                      size: 40,
-                    )
-                  ),
-                    ),
-                )
-              ],
-            )
-          ),
-          panel: Container(
-              padding: EdgeInsets.symmetric(vertical: 80,horizontal: 20),
-              child: Column(
-                children: <Widget>[
-                    Searchbar(),
-                    Searchlist(),
-                  ]
-                ),
-            ),
-          ), */
 
       body: Stack(
         children: [
@@ -157,39 +140,3 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
-/**Container(
-              width: MediaQuery.of(context).size.width,
-              child: TextButton(
-                onPressed: () {}, 
-                child: Icon(Icons.shopping_cart_checkout_rounded)
-              ),
-            ) 
-            
-            
-  Column(
-          mainAxisAlignment: MainAxisAlignment.end,
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            Container(
-              alignment: Alignment.center,
-              child: OutlinedButton(
-                style: TextButton.styleFrom(
-                  padding: EdgeInsets.all(20),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.only(topLeft: Radius.circular(30),topRight: Radius.circular(30))
-                  )
-                ),
-                onPressed: () {}, 
-                child: Icon(Icons.shopping_cart_checkout_rounded,size: 35,)
-              ),
-            )
-          ],
-        )          
-            
-            
-            
-            
-            
-            
-            
-            */

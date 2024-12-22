@@ -2,7 +2,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:prova/src/widgets/ListaRisultati.dart';
-import 'package:prova/src/widgets/ListaSpesa.dart';
+import 'package:prova/src/newWidgets/ListaSpesa.dart';
 import 'package:prova/src/widgets/SearchbarNew.dart';
 import 'package:sliding_up_panel/sliding_up_panel.dart';
 
@@ -22,7 +22,7 @@ class _slideUpProdottiState extends State<slideUpProdotti> {
   
   //final array2 = List<ListaSpesaClass>.generate(10, (index) => new ListaSpesaClass(index,false,index.toString(),'20','data'));
   final double radius = 30;
-
+/*
   void RetrieveValues(){
     List<String> arraySemplificato = [];
     widget.dbProd.get().then((value) {
@@ -42,7 +42,7 @@ class _slideUpProdottiState extends State<slideUpProdotti> {
 
     //return arraySemplificato;
   }
-
+*/
   @override
   void initState() {
     // TODO: implement initState
@@ -67,7 +67,7 @@ class _slideUpProdottiState extends State<slideUpProdotti> {
       });});
     
 
-    RetrieveValues();
+    //RetrieveValues();
     super.initState();
   }
 
@@ -79,9 +79,7 @@ class _slideUpProdottiState extends State<slideUpProdotti> {
         Container(
             height: MediaQuery.of(context).size.height - 50,
             margin: EdgeInsets.only(bottom: 50, top: 0),
-            child: ListaSpesa(
-              
-            )
+            child: ListaSpesa()
         ),
         SlidingUpPanel(
         backdropEnabled: true,
@@ -121,7 +119,7 @@ class _slideUpProdottiState extends State<slideUpProdotti> {
                           ),
                         ),
                     ),
-                    ListaRisultati(risultati: array.where((element) => element.toLowerCase().startsWith(widget.queryText.text.toLowerCase())).toList(),product: widget.queryText.text,)
+                    //ListaRisultati(risultati: array.where((element) => element.toLowerCase().startsWith(widget.queryText.text.toLowerCase())).toList(),product: widget.queryText.text,)
                   ]
                 ),
             ),
